@@ -1,7 +1,7 @@
 {
   "archive": "widget.zip",
-  "sha256": "3a54033863f7b620d0f8bfc87e5ddb0dc5b1219ca5a0f5e8b9714e7ea3fe4190",
-  "bytes": 307864,
+  "sha256": "8f31902c3700988ecb4062f41c48c36ab64f141e25a7f46a150f7b620c4ba207",
+  "bytes": 307932,
   "files": [
     "i18n/ru.json",
     "images/logo.png",
