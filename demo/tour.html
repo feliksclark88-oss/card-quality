@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Проверка карточки — демонстрация</title>
+  <link rel="stylesheet" href="demo.css"><style>body{height:616px;overflow:hidden}.demo-shell{margin:30px auto;gap:60px;grid-template-columns:minmax(0,1fr) 380px}.demo-card{max-height:556px;overflow:auto}.demo-intro h1{font-size:42px}.demo-note{font-size:13px}label{margin-top:15px}#destroy,#mount,#requests{display:none}.cardcheck-tehprof{font-size:12px!important}.cardcheck-tehprof .cardcheck-tehprof__result{padding:8px 0}</style>
+</head>
+<body>
+  <main class="demo-shell">
+    <section class="demo-intro">
+      <p class="eyebrow">TEHPROF · ОТКРЫТЫЙ ВИДЖЕТ</p>
+      <h1>Детали, которые легко пропустить</h1>
+      <p>Проверка телефонов и email без автоматических исправлений. Справа работает тот же код, который загружается в amoCRM.</p>
+      <p class="demo-note">Это локальная демонстрация с вымышленными значениями. Запрос к карточке заменён ответом выбранного сценария; она не подключается к аккаунту amoCRM.</p>
+      <label for="scenario">Сценарий проверки</label>
+      <select id="scenario">
+        <option value="attention">Пробелы, невидимый символ и повторы</option>
+        <option value="clean">Обычные значения</option>
+        <option value="international">Международные email и номера</option>
+        <option value="empty">Нет телефонов и email</option>
+        <option value="company">Карточка компании</option>
+        <option value="new">Новая несохранённая карточка</option>
+        <option value="unauthorized">Сессия недоступна · 401</option>
+        <option value="forbidden">Нет прав · 403</option>
+        <option value="deleted">Карточка удалена · 204</option>
+        <option value="failure">Ошибка сети</option>
+        <option value="malformed">Неожиданный формат ответа</option>
+        <option value="different">Ответ другой карточки</option>
+        <option value="xss">HTML в значении поля</option>
+      </select>
+      <p id="requests" aria-live="polite">Запросов карточки: 0</p>
+      <button type="button" id="destroy">Отключить виджет</button>
+      <button type="button" id="mount">Подключить заново</button>
+      <p><a href="../docs/">Описание и ограничения</a></p>
+    </section>
+    <aside class="demo-card" aria-label="Правая панель карточки">
+      <header><img src="../widget/images/logo_min.png" alt="" width="40" height="40"><div><strong>Проверка карточки</strong><span>TehProf</span></div></header>
+      <div id="widget-slot"></div>
+    </aside>
+  </main>
+  <script src="harness.js"></script>
+  <script src="../widget/lib/checks.js"></script>
+  <script src="../widget/script.js"></script>
+  <script src="start.js"></script>
+</body>
+</html>

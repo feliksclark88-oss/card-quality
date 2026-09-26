@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #edf2f2; color: #243b46; font: 16px/1.65 system-ui, sans-serif; }
+.demo-shell { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 70px; max-width: 1050px; margin: 80px auto; padding: 0 28px; align-items: start; }
+.eyebrow { color: #176f65; font-size: 12px; font-weight: 750; letter-spacing: .15em; }
+h1 { font-size: 42px; line-height: 1.15; letter-spacing: -.035em; margin: 22px 0; }
+.demo-note { color: #617079; font-size: 14px; }
+label { display: block; font-size: 14px; font-weight: 650; margin-top: 28px; }
+select { margin-top: 8px; padding: 10px; border: 1px solid #a6b9be; border-radius: 6px; width: 100%; background: white; font: inherit; font-size: 14px; }
+.demo-card { background: white; border: 1px solid #cfdcdd; border-radius: 12px; box-shadow: 0 12px 35px #193c4a0b; padding: 20px; }
+.demo-card header { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; margin-bottom: 14px; border-bottom: 1px solid #e0e7e7; }
+.demo-card header span { display: block; font-size: 12px; color: #63747b; }
+#requests { font-size: 13px; color: #51666e; }
+button { padding: 8px 12px; border-radius: 5px; border: 1px solid #acbfc3; background: white; color: #28545a; cursor: pointer; }
+a { color: #176f65; }
+@media (max-width: 760px) { .demo-shell { grid-template-columns: 1fr; gap: 28px; margin: 30px auto; max-width: 500px; } h1 { font-size: 32px; } }
